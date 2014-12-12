@@ -54,6 +54,9 @@ class FormModel(models.Model):
             'requires the “Store in database” action to be active. The sender '
             'will be given a unique URL to recall the data.'))
 
+    recipient_email = models.EmailField(_('Recipient email'), blank=True, null=True, 
+        help_text = _('Email address to send form data'))
+
     class Meta:
         ordering = ['name']
         verbose_name = _('Dynamic form')
