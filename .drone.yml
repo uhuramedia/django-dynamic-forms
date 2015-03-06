@@ -1,0 +1,4 @@
+
+script:
+- pip install tox
+- tox -r
