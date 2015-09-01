@@ -190,9 +190,6 @@ class BooleanField(BaseDynamicFormField):
     cls = 'django.forms.BooleanField'
     display_type = _('Boolean')
 
-    class Meta:
-        _exclude = ('required',)
-
 
 @dynamic_form_field
 class ChoiceField(BaseDynamicFormField):
