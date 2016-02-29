@@ -96,7 +96,7 @@ class DynamicTemplateView(TemplateView):
             context.update({
                 'data': data,
             })
-        except FormModelData.DoesNotExist:
+        except (FormModelData.DoesNotExist, FormModelData.MultipleObjectsReturned):
             pass
         return context
 

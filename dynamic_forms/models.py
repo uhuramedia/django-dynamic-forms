@@ -46,6 +46,9 @@ class FormModel(models.Model):
     recipient_email = models.EmailField(_('Recipient email'), blank=True,
         null=True, help_text=_('Email address to send form data.'))
 
+    recipient_email = models.EmailField(_('Recipient email'), blank=True, null=True, 
+        help_text = _('Email address to send form data'))
+
     class Meta:
         ordering = ['name']
         verbose_name = _('Dynamic form')
